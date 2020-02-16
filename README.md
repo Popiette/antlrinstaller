@@ -1,7 +1,7 @@
 # antlrinstaller
 Just a shell script for installing quickly antlr4.8 and its C++ runtime.
 
-#DISCLAIMER
+# DISCLAIMER
 
 I only tested this script on my machine, running debian10. I think it will work on yours, but I'm not sure at all ! **Be careful, and do not trust me !**
 
