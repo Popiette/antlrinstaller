@@ -41,3 +41,7 @@ cantlr4.sh
 ```
 
 > Because `antlr4.sh` and `cantlr4.sh` have been put in you `/usr/bin` directory, they should be accessible through the $PATH. So you should not have to worry about where they are located.
+
+# Uninstalling
+
+Use the `uninstall.sh` script that have been generated in your destination folder to remove the files from your computer.

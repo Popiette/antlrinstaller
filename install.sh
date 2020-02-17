@@ -16,7 +16,7 @@ jar_location=
 while [ -n "$1" ]
 do
 	case $1 in
-			"-d")
+			"-d" | "--dest")
 					shift
 					if [ -n "$1" ] 
 					then
@@ -81,6 +81,13 @@ echo "java -jar $jar_location \$@" >> $antlr_script
 
 echo "#! /bin/bash" > $antlr_comp
 echo "g++ -g -std=c++11 -I $runtime_target/include/antlr4-runtime/ -o exe *.cpp $runtime_target/lib/libantlr4-runtime.a" >> $antlr_comp
+
+echo "#! /bin/bash" > uninstall.sh
+echo "rm -rf /usr/local/lib/libantlr4-runtime.*" >> uninstall.sh
+echo "rm -rf /usr/local/include/antlr4-runtime" >> uninstall.sh
+echo "rm /usr/bin/antlr4.sh /usr/bin/cantlr4.sh" >> uninstall.sh
+echo "rm -rf $dest" >> uninstall.sh
+chmod +x uninstall.sh
 
 echo "Copying scripts..."
 
