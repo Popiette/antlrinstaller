@@ -44,7 +44,7 @@ echo "Antlr4.8 installer (by Popiette)"
 
 if [ -d $dest ] && [ -z "$force" ] 
 then
-	echo "$dest directory already exists. Aborting installation."
+	echo -e "\e[31m$dest directory already exists. Aborting installation.\e[39m"
 	echo "If you REALLY want to put antlr there, re-run the command with -f."
 	exit
 fi
@@ -90,7 +90,7 @@ mv $antlr_comp /usr/bin/$antlr_comp
 chmod +x /usr/bin/$antlr_script
 chmod +x /usr/bin/$antlr_comp
 
-echo "Antlr4.8 and its C++ runtime are now installed and ready to use !"
+echo -e "\e[5m\e[36mAntlr4.8 and its C++ runtime are now installed and ready to use !\e[39m\e[0m"
 
 rm -rf cpp
 chown -R $USER $dest
