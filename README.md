@@ -14,6 +14,7 @@ Before installing the script, you need the following programs on your computer :
 * java (I don't know if openjdk works )
 * git
 * wget
+* uuid-dev
 
 Get the repo :
 ```
