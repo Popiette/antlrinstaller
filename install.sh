@@ -80,7 +80,7 @@ echo "#! /bin/bash" > $antlr_script
 echo "java -jar $jar_location \$@" >> $antlr_script
 
 echo "#! /bin/bash" > $antlr_comp
-echo "g++ -g -std=c++11 -I $runtime_target/include/antlr4-runtime/ -o exe *.cpp $runtime_target/lib/libantlr4-runtime.a" >> $antlr_comp
+echo "g++ -g -std=c++11 -I $runtime_target/include/antlr4-runtime/ *.cpp $runtime_target/lib/libantlr4-runtime.a \$@" >> $antlr_comp
 
 echo "#! /bin/bash" > uninstall.sh
 echo "rm -rf /usr/local/lib/libantlr4-runtime.*" >> uninstall.sh
